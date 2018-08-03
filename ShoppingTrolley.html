@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>购物车</title>
+		<link rel="stylesheet" href="https://at.alicdn.com/t/font_763029_aye2ek4c02.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/dateilpage.css"/>
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.cartList {
+				width: 1140px;
+				
+				background: #e9617b;
+				margin: 0 auto;
+				
+			}
+			
+			ul {
+				list-style: none;
+			}
+			
+			.cartHead {
+				padding-left: 20px;
+				line-height: 40px;
+				border: 1px solid black;
+				height: 40px;
+				background: white;
+				margin-top: 20px;
+			}
+			
+			.cartHead li {
+				width: 200px;
+				height: 50px;
+				float: left;
+				font: 32px/50px "楷体";
+				text-align: center;
+			}
+			
+			.goodInfo {
+				margin-top: 20px;
+				background: white;
+				border: 1px solid black;
+				border-top: none;
+				height: 160px;
+			}
+			
+			.goodInfo li {
+				float: left;
+				width: 180px;
+				height: 100px;
+				float: left;
+				font: 18px/120px "";
+				text-align: center;
+			}
+			
+			.goodInfo li input {
+				width: 30px;
+				text-align: center;
+			}
+			
+			.goodInfo li.num a {
+				display: inline-block;
+				width: 22px;
+				height: 22px;
+				font: 22px/20px "";
+				background: #ddd;
+				text-decoration: none;
+			}
+			
+			.goodInfo li img {
+				width: 112px;
+				height: 112px;
+				margin-top: 5px;
+				text-align: center;
+			}
+			
+			.blank {
+				margin-top: 20px;
+				background: white;
+				height: 100px;
+				font: 32px/50px "";
+				text-align: center;
+				border: 1px solid black;
+				border-top: none;
+				display: none;
+			}
+			.aa{
+				width: 1140px;
+				margin: 0 auto;
+				background: white;
+				padding: 10px;
+				margin-bottom: 50px;
+			}
+			.aa .bb{
+				background: #f5f5f5;
+				width: 1120px;
+				height: 100%;
+				padding: 6px;
+			}
+			.aa .cc a{
+				width: 60px;
+				height: 22px;
+				background: #de3c5b;
+				color: white;
+				font-weight: bold;
+				float: right;
+				text-align: center;
+				border-radius: 10px;
+			}
+		</style>
+		
+	</head>
+	<body style="background: #e9617b;">
+				<!--返回头部小火箭-->
+		<div class="gotop">
+			<i class="iconfont icon-huojianfeiyue"></i>
+			<p>TOP</p>
+		</div>
+			<header>
+	     <!--顶部-------------------------------->		
+  <div id="top" class="header_top ">
+  	<div class="container clearfix">
+  		<ul class="pull_left">
+  			<li><a href="index.html">海淘首页</a></li>
+  			<li><a href="#">关于我们</a></li>
+  			<li><a href="#">世界时间</a></li>
+  		</ul>
+  		<div class="pull_right">
+  			<ul class="list_unstyled">
+  				<li class="dropdown">
+  					<a class="wdzy"  href="#">
+  						我的转运<i class="caret"></i></a>
+  				    
+  				    <ul class=" nav_wdzy" >
+  				    	<li><a href="#"><i class="iconfont icon-bank"></i>转运仓库</a></li>
+  				    	<li><a href="#"><i class="iconfont icon-bullhorn"></i>到货预报</a></li>
+  				    	<li><a href="#"><i class="iconfont icon-cube"></i>包裹管理</a></li>
+  				    	<li><a href="#"><i class="iconfont icon-plane"></i>转运订单</a></li>
+  				    	<li><a href="#"><i class="iconfont icon-podcast"></i>包裹认领</a></li>
+  				    </ul>
+  				
+  				</li>
+  				<li><a href="#">我的团购</a></li>
+  				<li class="dropdown">
+  					<a class="wdfl" href="#">我的返利<i class="caret"></i></a>
+  				    <ul class=" nav_wdfl" >
+  				    	<li><a href="#"><i class="iconfont icon-money"></i>返利打赏</a></li>
+  				    	<li><a href="#"><i class="iconfont icon-gift"></i>转运红包</a></li>
+  				    	<li><a href="#"><i class="iconfont icon-book"></i>返利攻略</a></li>
+  				    	<li><a href="#"><i class="iconfont icon-users"></i>我的邀请</a></li>
+  				    </ul>
+  				</li>
+  				<li><a href="#">分享收藏</a></li>
+  				<li><a href="register.html">注册</a></li>
+  				<li class="dropdown">
+  					<a class="dl" href="login.html">登陆<i class="caret"></i></a>
+  					 <ul class="nav_dl" >
+  				    	<li><a href="#"><i class="iconfont icon-wo"></i>会员登陆</a></li>
+  				    	<li><a href="#"><i class="iconfont icon-weixin"></i>微信登陆</a></li>
+  				    	<li><a href="#"><i class="iconfont icon-weibo"></i>微博登陆</a></li>
+  				    	<li><a href="#"><i class="iconfont icon-qq"></i>QQ登陆</a></li>
+  				    </ul>
+  				</li>
+  			</ul>
+  		</div>
+  	</div>
+  </div>
+	      
+	              <!--顶部海淘网搜索栏----------------------->  
+		<div class="header">
+		<div class="container">
+		<div class="row">
+			<div class="col-xs-4">
+				<a href="index.html">
+		<img src="images/htwlogo.png" alt="海淘网" />
+				</a>
+			</div>
+			<div class="col-xs-6">
+				<form class="nav-search" action="#">
+				  <input class="search-input" type="text" name="q" id="q" placeholder="搜索全球" />
+				<button class="search-btn" type="submit">
+					<i class="glyphicon glyphicon-search search-fa"></i>
+				</button>
+				</form>
+				
+				<ul class="search-hot-word clearfix">
+					<span>热搜:</span>
+					<li><a href="#">母亲节</a></li>
+					<li><a href="#">costco</a></li>
+					<li><a href="#">美国亡灵纪念日</a></li>
+					<li><a href="#">夏日装备</a></li>
+					<li><a href="#">葡萄籽</a></li>
+					<li><a href="#">面膜</a></li>
+					<li><a href="#">痛风</a></li>
+					<li><a href="#">水杯</a></li>
+				</ul>
+	    			</div>
+	    			<div class="col-xs-2">
+	    				<a id="buy" class="btn btn-shoppingcar" href="ShoppingTrolley.html">
+	    					<span  class="glyphicon glyphicon-shopping-cart"></span>
+	    					购物车
+	    				</a>
+	    			</div>
+	    		</div>
+	    	</div>
+	    </div>
+	</header>
+	
+	<!---------------NAV导航栏-->
+	
+	<nav class="header_nav">
+		<div class="container clearfix">
+			<ul class="header_nav_left">
+				<li class="dropdown-toggle">
+					<a href="group.html">
+				    <i class="iconfont icon-list"></i>
+					团购首页
+					</a>
+					
+					<ul class="dropdown">
+						<li><span class="iconfont icon-child"></span>育儿<i class="iconfont icon-right"></i></li>
+						<li><span class="iconfont icon-leaf"></span>保健<i class="iconfont icon-right"></i></li>
+						<li><span class="iconfont icon-female"></span>美妆<i class="iconfont icon-right"></i></li>
+						<li><span class="iconfont icon-ravelry"></span>生活<i class="iconfont icon-right"></i></li>
+						<li><span class="iconfont icon-bag"></span>箱包<i class="iconfont icon-right"></i></li>
+						<li><span class="iconfont icon-paw"></span>鞋子<i class="iconfont icon-right"></i></li>
+						<li><span class="iconfont icon-tachometer"></span>美食<i class="iconfont icon-right"></i></li>
+						<li><span class="iconfont icon-empire"></span>潮流<i class="iconfont icon-right"></i></li>
+					</ul>
+				</li>
+				<li><a href="#">达人专享</a></li>
+				<li><a href="#">美国馆</a></li>
+				<li><a href="#">澳洲馆</a></li>
+				<li><a href="#">德国馆</a></li>
+				<li><a href="#">荷兰馆</a></li>
+				<li><a href="#">中国馆</a></li>
+				<li><a href="#">韩国馆</a></li>
+				<li><a href="#">香港馆</a></li>
+			</ul>
+			
+			<!--<div class="header_nav_right">
+				<ul>
+					<li><a href="#"><i class="iconfont icon-chrome"></i>海淘盒子</a></li>
+					<li><a href="#"><i class="iconfont icon-h-square"></i>海淘App</a></li>
+				</ul>
+			</div>-->
+		</div>
+	</nav>
+ 	
+ 	<div class="cartList">
+			<!--<p class="cartHead">美国Costco免费代购</p>
+			<ul class="goodInfo" data-good-id="sp1">
+				<li><img src="img/1.jpg" /></li>
+				<li>测试</li>
+				<li>30</li>
+				<li class="num">
+					<a href="javascript:;" class="minus">-</a>
+					<input type="text" name="" id="" value="2" />
+					<a href="javascript:;" class="plus">+</a>
+				</li>
+				<li class="total">60</li>
+				<li><a href="javascript:;" class="del">删除</a></li>
+			</ul>-->
+			<div class="blank">
+				您的购物车空空如也~~
+			</div>
+			
+		</div>
+		<div class="aa">
+				<p class="bb">美国直邮，首重60元/2磅，续重30元/磅。周末及节假日休息，不打包也不出库。下单后5个工作日内至Costco采购并发货。如遇Costco缺货商品，则可能取消订单。发货后正常12-15个工作日到手，全部订单包税。 <a href="##">详细</a></p>
+			    <p class="cc">商品:<span class="unit" style="color: #FF4C66;">0.00</span>元  重量: 0.00磅  运费:  0.00元   总计: <span class="sum" style="color: #ff4c66;">0.00</span>元  <a href="##">结算</a></p>
+			</div>
+	<!--底部-->	
+	<div class="footer">
+     	<p>
+     		<a href="#">关于我们</a>
+     		<a href="#">网站守则</a>
+     		<a href="#">团购说明</a>
+     		<a href="#">转运服务</a>
+     		<a href="#">联系我们</a>
+     	</p>
+     	<p>
+     		&copy;2018 海淘网 
+     		<a href="#">沪ICP备14025008</a>
+     		<a href="#"><img src="images/gongshangicon.gif" height="20" alt="" /></a>
+     		<img src="images/beian.png" height="20" alt="" />
+     		网安备31011502002285
+     	</p>
+     </div>	
+		<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+		<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript">
+			$(function() {
+				//取出在cookie中存的购物车信息
+				var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
+
+				if(!cartStr) {
+					$(".blank").css({
+						display: "block"
+					});
+					$(".aa").css({display: "none"});
+				} else {
+					var cartObj = convertCartStrToObj(cartStr);
+					//遍历所有的商品生成html添加到购物车列表中去
+					for(var id in cartObj) {
+						//商品信息对象
+						var good = cartObj[id];
+						var str = '<ul class="goodInfo" data-good-id="' + id + '">' +
+							'<li><img src="' + good.src + '" /></li>' +
+							'<li>' + good.name + '</li>' +
+							'<li>' + good.price + '</li>' +
+							'<li class="num">' +
+							'<a href="javascript:;" class="minus">-</a>' +
+							' <input type="text" value="' + good.num + '" />  ' +
+							'<a href="javascript:;" class="plus">+</a>' +
+							'</li>' +
+							'<li class="total">' + good.num * good.price + '</li>' +
+							'<li><a href="javascript:;" class="del">删除</a></li>' +
+							'</ul>';
+						//将上面的结构添加到cartList中去
+						
+						$(str).appendTo(".cartList");
+						$(".unit").html(good.price);
+						$(".sum").html(good.num*good.price)
+					}
+					//给每个商品添加从购物车删除的事件
+					$('.goodInfo a.del').click(function() {
+						//在页面上将商品信息删除，顺便获取一个该商品的id
+						var id = $(this).parents('.goodInfo').remove().attr("data-good-id");
+						//从cookie中将该商品删除
+						var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
+						var cartObj = convertCartStrToObj(cartStr);
+                         $(".sum").html("0.00");
+                          $(".unit").html("0.00")
+                          $(".aa").css({display: "none"});
+						delete cartObj[id];
+						//将新商品信息放回cookie
+						$.cookie('cart', convertObjToCartStr(cartObj), {
+							expires: 7,
+							path: "/"
+						});
+					})
+
+					//给增加按钮添加事件
+					$(".goodInfo a.plus").click(function() {
+
+						var id = $(this).parents('.goodInfo').attr("data-good-id");
+
+						var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
+						var cartObj = convertCartStrToObj(cartStr);
+						cartObj[id].num += 1;
+						//将页面上显示的数量加1
+						$(this).siblings("input").val("" + cartObj[id].num);
+						//更新页面上的小计
+						$(this).parent().siblings('.total').html(cartObj[id].num * cartObj[id].price + "");
+						$(".sum").html($(".total").html())
+						//将信息放回cookie
+						$.cookie('cart', convertObjToCartStr(cartObj), {
+							expires: 7,
+							path: "/"
+						});
+					});
+					//给减按钮添加点击事件
+					$(".goodInfo a.minus").click(function(){
+						var id = $(this).parents('.goodInfo').attr("data-good-id");
+						var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
+						var cartObj = convertCartStrToObj(cartStr);
+						if(cartObj[id].num > 1){ //商品数量减少不能少于1
+							cartObj[id].num -= 1;
+							//将页面上显示的数量减1
+							$(this).siblings("input").val("" + cartObj[id].num);
+							//更新页面上的小计
+							$(this).parent().siblings('.total').html(cartObj[id].num * cartObj[id].price + "");
+							$(".sum").html($(".total").html())
+							//将信息放回cookie
+							$.cookie('cart', convertObjToCartStr(cartObj), {
+								expires: 7,
+								path: "/"
+							});
+						}
+						
+						
+					});
+					
+					//改数量的input绑定一个blur事件
+					$(".goodInfo li.num input").blur(function(){
+						var id = $(this).parents('.goodInfo').attr("data-good-id");
+						var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
+						var cartObj = convertCartStrToObj(cartStr);
+						//判断用户输入是否合法
+						var pattern = /^\d+$/;
+						if(!pattern.test($(this).val())){
+							cartObj[id].num = 1;
+							$(this).val("1");
+						}else{
+							//修改一下数量
+						cartObj[id].num = parseInt($(this).val());
+						}
+						
+						
+							$(this).siblings("input").val("" + cartObj[id].num);
+							//更新页面上的小计
+							$(this).parent().siblings('.total').html(cartObj[id].num * cartObj[id].price + "");
+							//将信息放回cookie
+							$.cookie('cart', convertObjToCartStr(cartObj), {
+								expires: 7,
+								path: "/"
+							});
+					})
+					
+			}
+
+			});
+
+			function convertCartStrToObj(cartStr) {
+				//如果是空字符串，即没有购物车信息，那么购物车为空，直接返回一个空对象
+				if(!cartStr) {
+					return {};
+				}
+				var goods = cartStr.split(":");
+				var obj = {};
+				for(var i = 0; i < goods.length; i++) {
+					var data = goods[i].split(",");
+					//以商品的id为健，商品的其他信息为值，这个值也设计为一个对象
+					obj[data[0]] = {
+						name: data[1],
+						price: parseFloat(data[2]),
+						num: parseInt(data[3]),
+						src: data[4]
+					}
+				}
+				return obj;
+			}
+
+			function convertObjToCartStr(obj) {			
+				var cartStr = "";
+				for(var id in obj) {
+					if(cartStr) {
+						cartStr += ":";
+					}
+					cartStr += id + "," + obj[id].name + "," + obj[id].price + "," + obj[id].num + "," + obj[id].src;
+				}
+				return cartStr;
+			}
+		</script>
+	</body>
+</html>
